@@ -23,15 +23,30 @@ $("textarea").each(function() {
 
   });
 
+
   $(".saveBtn").on("click", function(){
-$(this.)attr.$
+
+    var lastname = localStorage.getItem("key");
+    var lastname = localStorage.getItem("key");
+
+    localStorage.setItem("time-block", "value");
+  }
 
 
-var time for localStorage value
-var text vale
-  })
 
 
+
+
+
+//   $(".saveBtn").on("click", function(){
+// $(this.)attr.$
+
+
+// var time for localStorage value
+// var text vale
+//   })
+
+// console.log(new Date());
 
 // parsin
 //save button eventlisteer
