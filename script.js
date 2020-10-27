@@ -26,12 +26,13 @@ $("textarea").each(function() {
   
   $(".saveBtn").on("click", function(){
     
-    
 
-    localStorage.getItem("ScheduleTimeInputText");
+    
+    var textInPut = $(this).sibling("textAreaInput").value();
+
 
      
-    localStorage.setItem("ScheduleTimeInputText", "#textAreaInput");
+    localStorage.setItem("textByUser", textInPut);
 
   });
 
