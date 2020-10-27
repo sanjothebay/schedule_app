@@ -22,18 +22,21 @@ $("textarea").each(function() {
 }
 
   });
-
-
+  
+  
   $(".saveBtn").on("click", function(){
+    
+    
 
-    var lastname = localStorage.getItem("key");
-    var lastname = localStorage.getItem("key");
+    localStorage.getItem("ScheduleTimeInputText");
 
-    localStorage.setItem("time-block", "value");
-  }
+     
+    localStorage.setItem("ScheduleTimeInputText", "#textAreaInput");
+
+  });
 
 
-
+//00:46:17/04:37:50  localstorage to add the aside to show message
 
 
 
