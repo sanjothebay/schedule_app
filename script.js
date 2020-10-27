@@ -26,13 +26,12 @@ $("textarea").each(function() {
   
   $(".saveBtn").on("click", function(){
     
+    $("result").html = localStorage.getItem("textByUser");
 
-    
-    var textInPut = $(this).sibling("textAreaInput").value();
-
-
+    var textInPut = $(this).siblings("textarea").val();
      
     localStorage.setItem("textByUser", textInPut);
+
 
   });
 
