@@ -42,23 +42,24 @@ $(this).text(localStorage.getItem("textByUser"));
 
   });
 
+  
   var sideTextSaved = document.querySelector("#exampleFormControlTextarea1")
+
+  var textInPutFromUser;
+  let timeSlot;
   
   localStorage.getItem("textInPut");
-
-
 
   $(".saveBtn").on("click", function(){
     //event.preventDefault()
     
+    textInPutFromUser = $(this).siblings("textarea").val();
 
-    var textInPutFromUser = $(this).siblings("textarea").val();
-
-    var timeSlot = $(this).attr("id");
+    timeSlot = $(this).parent().attr("id");
     
+    sideTextSaved.textContent = timeSlot;
     sideTextSaved.textContent = textInPutFromUser;
 
-     
     localStorage.setItem("textByUser", textInPutFromUser);
   
     localStorage.setItem("currentHourTime", timeSlot);
