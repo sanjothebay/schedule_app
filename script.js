@@ -55,7 +55,7 @@ $(this).text(localStorage.getItem("textByUser"));
     
     textInPutFromUser = $(this).siblings("textarea").val();
 
-    timeSlot = $(this).parent().attr("id");
+    timeSlot = $(this).parent().attr("id").val();
     
     sideTextSaved.textContent = timeSlot;
     sideTextSaved.textContent = textInPutFromUser;
