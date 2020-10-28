@@ -1,3 +1,17 @@
+var hourTime = {
+  1: "one",
+  2: "Two",
+  3: "Three",
+  4: "four",
+  5: "five",
+  6: "six",
+  7: "seven",
+  8: "eight",
+  9: "nine"
+};
+
+
+
 var d = new Date();
 $("#currentDay").html(d);
 console.log(currentDay)
@@ -40,14 +54,15 @@ $(this).text(localStorage.getItem("textByUser"));
 
     var textInPutFromUser = $(this).siblings("textarea").val();
 
-    var textInPutFromUser = $(this).parent("id").val();
+    var timeSlot = $(this).attr("id");
     
     sideTextSaved.textContent = textInPutFromUser;
 
      
     localStorage.setItem("textByUser", textInPutFromUser);
   
-    localStorage.setItem("currentHourTime", textAreaTime);
+    localStorage.setItem("currentHourTime", timeSlot);
+    console.log(timeSlot)
 
   });
 
