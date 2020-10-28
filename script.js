@@ -38,8 +38,8 @@ $("textarea").each(function() {
  else if (textAreaTime < currentHour){
     $(this).addClass("past");
 }
-$(this).text(localStorage.getItem("textByUser"));
-
+//$(this).text(localStorage.getItem("textByUser"));
+localStorage.getItem(textAreaTime)
   });
 
   
@@ -60,9 +60,9 @@ $(this).text(localStorage.getItem("textByUser"));
     //sideTextSaved.textContent = timeSlot;
     //sideTextSaved.textContent = textInPutFromUser;
 
-    localStorage.setItem("textByUser", textInPutFromUser);
-  
-    localStorage.setItem("currentHourTime", timeSlot);
+    //localStorage.setItem(timeSlot, "textByUser");
+    localStorage.setItem(timeSlot, textInPutFromUser);
+   //localStorage.setItem("currentHourTime", timeSlot);
     console.log(timeSlot)
 
   });
