@@ -43,9 +43,9 @@ $(this).text(localStorage.getItem("textByUser"));
   });
 
   
-  var sideTextSaved = document.querySelector("#exampleFormControlTextarea1")
+  let sideTextSaved = document.querySelector("#exampleFormControlTextarea1")
 
-  var textInPutFromUser;
+  let textInPutFromUser;
   let timeSlot;
   
   localStorage.getItem("textInPut");
@@ -55,10 +55,10 @@ $(this).text(localStorage.getItem("textByUser"));
     
     textInPutFromUser = $(this).siblings("textarea").val();
 
-    timeSlot = $(this).parent().attr("id").val();
+    timeSlot = $(this).parent().attr("id");
     
-    sideTextSaved.textContent = timeSlot;
-    sideTextSaved.textContent = textInPutFromUser;
+    //sideTextSaved.textContent = timeSlot;
+    //sideTextSaved.textContent = textInPutFromUser;
 
     localStorage.setItem("textByUser", textInPutFromUser);
   
