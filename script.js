@@ -28,44 +28,47 @@ $("textarea").each(function() {
     console.log( $( this ));
     textAreaTime = parseInt($(this).attr("id"))
     console.log(textAreaTime)
-
+    
     if (textAreaTime === currentHour) {
         $(this).addClass("present")
         
-    } else if (textAreaTime > currentHour){
+      } else if (textAreaTime > currentHour){
         $(this).addClass("future");
     }
- else if (textAreaTime < currentHour){
-    $(this).addClass("past");
-}
-//$(this).text(localStorage.getItem("textByUser"));
-localStorage.getItem(textAreaTime)
+    else if (textAreaTime < currentHour){
+      $(this).addClass("past");
+    }
+    //$(this).text(localStorage.getItem(textInPutFromUser, timeSlot));
   });
-
+  
+  localStorage.getItem(textAreaTime)
   
   let sideTextSaved = document.querySelector("#exampleFormControlTextarea1")
-
+  
   let textInPutFromUser;
   let timeSlot;
   
-  localStorage.getItem("textInPut");
-
+  localStorage.getItem(textInPutFromUser, timeSlot);
+  
   $(".saveBtn").on("click", function(){
     //event.preventDefault()
     
     textInPutFromUser = $(this).siblings("textarea").val();
-
+    
     timeSlot = $(this).parent().attr("id");
     
     //sideTextSaved.textContent = timeSlot;
     //sideTextSaved.textContent = textInPutFromUser;
+    localStorage.getItem(textInPutFromUser, timeSlot);
 
     //localStorage.setItem(timeSlot, "textByUser");
-    localStorage.setItem(timeSlot, textInPutFromUser);
+    localStorage.setItem(textInPutFromUser, timeSlot);
    //localStorage.setItem("currentHourTime", timeSlot);
     console.log(timeSlot)
 
   });
+
+  console.log(localStorage)
 
 
 //00:46:17/04:37:50  localstorage to add the aside to show message
