@@ -24,6 +24,8 @@ let textAreaTime;
 let currentHour = moment().hour(); // Number
 console.log(currentHour)
 
+//textInPutFromUser = localStorage.getItem(id);
+
 $("textarea").each(function() {
     console.log( $( this ));
     textAreaTime = parseInt($(this).attr("id"))
@@ -48,7 +50,7 @@ $("textarea").each(function() {
   let textInPutFromUser;
   let timeSlot;
   
-  localStorage.getItem(timeSlot, textInPutFromUser);
+  $(this).text = localStorage.getItem(timeSlot, textInPutFromUser);
   
   $("#id.testAreaInput").val(localStorage.getItem(timeSlot, textInPutFromUser));
 
@@ -64,21 +66,23 @@ $("textarea").each(function() {
    var testButton =  document.getElementById("9 textAreaInput")
    console.log(testButton)
     //sideTextSaved.textContent = textInPutFromUser;
-    localStorage.getItem(timeSlot, textInPutFromUser);
+    //localStorage.getItem(timeSlot, textInPutFromUser);
 
     //localStorage.setItem(timeSlot, "textByUser");
     localStorage.setItem(timeSlot, textInPutFromUser);
    //localStorage.setItem("currentHourTime", timeSlot);
     console.log(timeSlot)
 
+   
+    
+
   });
 
   
   console.log(localStorage)
 
-
+ // $(this).text(localStorage.getItem(textInPutFromUser, timeSlot));
 //00:46:17/04:37:50  localstorage to add the aside to show message
-
 
 
 
