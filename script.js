@@ -27,7 +27,7 @@ console.log(currentHour)
 $("textarea").each(function() {
     console.log( $( this ));
     textAreaTime = parseInt($(this).attr("id"))
-    console.log(textAreaTime)
+    //console.log(textAreaTime)
     
     if (textAreaTime === currentHour) {
         $(this).addClass("present")
@@ -48,26 +48,32 @@ $("textarea").each(function() {
   let textInPutFromUser;
   let timeSlot;
   
-  localStorage.getItem(textInPutFromUser, timeSlot);
+  localStorage.getItem(timeSlot, textInPutFromUser);
   
+  $("#id.testAreaInput").val(localStorage.getItem(timeSlot, textInPutFromUser));
+
   $(".saveBtn").on("click", function(){
     //event.preventDefault()
     
     textInPutFromUser = $(this).siblings("textarea").val();
     
     timeSlot = $(this).parent().attr("id");
-    
+
+    $(this).val(localStorage.getItem("id"));
     //sideTextSaved.textContent = timeSlot;
+   var testButton =  document.getElementById("9 textAreaInput")
+   console.log(testButton)
     //sideTextSaved.textContent = textInPutFromUser;
-    localStorage.getItem(textInPutFromUser, timeSlot);
+    localStorage.getItem(timeSlot, textInPutFromUser);
 
     //localStorage.setItem(timeSlot, "textByUser");
-    localStorage.setItem(textInPutFromUser, timeSlot);
+    localStorage.setItem(timeSlot, textInPutFromUser);
    //localStorage.setItem("currentHourTime", timeSlot);
     console.log(timeSlot)
 
   });
 
+  
   console.log(localStorage)
 
 
