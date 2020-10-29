@@ -53,33 +53,43 @@ $("textarea").each(function() {
   $(this).text = localStorage.getItem(timeSlot, textInPutFromUser);
   
   $("#id.testAreaInput").val(localStorage.getItem(timeSlot, textInPutFromUser));
-
+  
   $(".saveBtn").on("click", function(){
     //event.preventDefault()
     
     textInPutFromUser = $(this).siblings("textarea").val();
     
     timeSlot = $(this).parent().attr("id");
-
+    
     $(this).val(localStorage.getItem("id"));
     //sideTextSaved.textContent = timeSlot;
-   var testButton =  document.getElementById("9 textAreaInput")
-   console.log(testButton)
+    var testButton =  document.getElementById("9 textAreaInput")
+    console.log(testButton)
     //sideTextSaved.textContent = textInPutFromUser;
     //localStorage.getItem(timeSlot, textInPutFromUser);
-
+    
     //localStorage.setItem(timeSlot, "textByUser");
     localStorage.setItem(timeSlot, textInPutFromUser);
    //localStorage.setItem("currentHourTime", timeSlot);
-    console.log(timeSlot)
-
+   console.log(timeSlot)
    
-    
-
+   
+   
+   
   });
-
   
   console.log(localStorage)
+  
+  $(".time-block").each(function(){
+    var text = localStorage.getItem($(this).attr("id"))
+    $(this).children("textarea").val(text)
+    console.log(text)
+    console.log(this)
+    var id= $(this).attr("id")
+    console.log("id:", id)
+
+  });
+  
 
  // $(this).text(localStorage.getItem(textInPutFromUser, timeSlot));
 //00:46:17/04:37:50  localstorage to add the aside to show message
