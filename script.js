@@ -10,7 +10,8 @@ var hourTime = {
   9: "nine"
 };
 
-
+//let newVar =$("<div>").text("createdDiv")
+//$("aside").append(newVar);
 
 var d = new Date();
 $("#currentDay").html(d);
@@ -65,7 +66,7 @@ $("textarea").each(function() {
     //sideTextSaved.textContent = timeSlot;
     var testButton =  document.getElementById("9 textAreaInput")
     console.log(testButton)
-    //sideTextSaved.textContent = textInPutFromUser;
+    //sideTextSaved.textContent = localStorage;
     //localStorage.getItem(timeSlot, textInPutFromUser);
     
     //localStorage.setItem(timeSlot, "textByUser");
