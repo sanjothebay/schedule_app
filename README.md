@@ -5,6 +5,9 @@ https://sanjothebay.github.io/tech_monterrey_fourth_hw_schedule_app/
 https://github.com/sanjothebay/tech_monterrey_fourth_hw_schedule_app
 
 
+![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
+
+
 ![image](https://user-images.githubusercontent.com/67298961/97792028-93008680-1b9e-11eb-9312-0e6c1c084cfa.png)
 
 
