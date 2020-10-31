@@ -10,7 +10,8 @@ var hourTime = {
   9: "nine"
 };
 
-//let newVar =$("<div>").text("createdDiv")
+//let newVar =$("<div>");
+// newVar.text("createdDiv");
 //$("aside").append(newVar);
 
 var d = new Date();
@@ -50,13 +51,15 @@ $("textarea").each(function() {
   
   let textInPutFromUser;
   let timeSlot;
+
+ 
   
   $(this).text = localStorage.getItem(timeSlot, textInPutFromUser);
   
   $("#id.testAreaInput").val(localStorage.getItem(timeSlot, textInPutFromUser));
   
-  $(".saveBtn").on("click", function(){
-    //event.preventDefault()
+  $(".saveBtn").on("click", function(event){
+    event.preventDefault()
     
     textInPutFromUser = $(this).siblings("textarea").val();
     
@@ -66,7 +69,10 @@ $("textarea").each(function() {
     //sideTextSaved.textContent = timeSlot;
     var testButton =  document.getElementById("9 textAreaInput")
     console.log(testButton)
-    //sideTextSaved.textContent = localStorage;
+
+
+    sideTextSaved.textContent = ('jsonValue',JSON.stringify(localStorage));
+    //sideTextSaved.textContent = textInPutFromUser;
     //localStorage.getItem(timeSlot, textInPutFromUser);
     
     //localStorage.setItem(timeSlot, "textByUser");
@@ -90,6 +96,8 @@ $("textarea").each(function() {
     console.log("id:", id)
 
   });
+  
+  
   
 
  // $(this).text(localStorage.getItem(textInPutFromUser, timeSlot));
