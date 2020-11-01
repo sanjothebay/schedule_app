@@ -54,6 +54,8 @@ other sections. I aldo added a section for the text to display afetr clicking tw
 
 
 ![image](https://user-images.githubusercontent.com/67298961/97792048-c04d3480-1b9e-11eb-9074-628600063b70.png)
+
+
 I was able to get help an Figure out the if it was not the current time the color would change according to the current tme of day.
 I had to asked ASKBCS for a guide as i struggled withe saving the users input to stay after refreshing. Luckly I was able to et help and complete the task!!!!
 Im Very happy as you can see in my code howhard i strugge to figure things out. I will NOt give up and this will come .
